@@ -1,8 +1,6 @@
-import { createApp } from "vue";
 import "./style.css";
+
+import { createApp } from "vue";
 import App from "./App.vue";
-import { useDark } from "@vueuse/core";
 
 createApp(App).mount("#app");
-
-useDark();

@@ -2,7 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+  color-scheme: dark;
+}
+
 body {
-  @apply bg-white text-gray-900;
+  @apply bg-gray-50 text-gray-900;
   @apply dark:bg-gray-900 dark:text-gray-100;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-2.5 py-1.5 text-sm font-medium shadow-sm;
+    @apply border border-gray-300 bg-white hover:bg-gray-100;
+    @apply dark:border-white/10 dark:bg-gray-700 dark:hover:bg-gray-600;
+  }
+
+  .input {
+    @apply inline-block appearance-none rounded-md px-2.5 py-1.5 text-sm shadow-sm;
+    @apply border border-gray-300 bg-white hover:border-gray-400;
+    @apply dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600;
+  }
+
+  select.input {
+    @apply bg-right bg-no-repeat pr-5;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path d='M2 6l4 4 4-4z' fill='%23777' /></svg>");
+  }
 }
